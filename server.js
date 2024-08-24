@@ -52,7 +52,7 @@ app.post('/upload', upload.array('images'), async (req, res) => {
     const files = req.files;
     const folderName = req.body.folderName;
     const imageUrls = files.map(file => {
-      const imageUrl = `http://localhost:5000/uploads/${folderName}/${file.filename}`;
+      const imageUrl = `https://image-uploader-8o8h.onrender.com/uploads/${folderName}/${file.filename}`;
       const image = new Image({
         filename: file.filename,
         url: imageUrl,
